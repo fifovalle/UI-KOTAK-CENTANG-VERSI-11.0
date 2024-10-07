@@ -1,0 +1,81 @@
+:root {
+  --warnaPertama: #a7a9be;
+  --warnaPengarah: #e53170;
+  --warnaAktif: #ff8906;
+  --warnaSekarang: var(--warnaPertama);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0f0e17;
+}
+
+.formulir > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formulir > div + div {
+  margin-block-start: 0.5rem;
+}
+
+.formulir label {
+  cursor: pointer;
+  color: var(--warnaSekarang);
+  transition: color 150ms ease-in-out;
+}
+
+.formulir input[type="checkbox"] {
+  appearance: none;
+  outline: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--warnaSekarang);
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.formulir input[type="checkbox"]::after {
+  content: "\2714";
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  color: var(--warnaAktif);
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.formulir label:hover,
+.formulir input[type="checkbox"]:focus-visible,
+.formulir input[type="checkbox"]:focus-visible + label,
+.formulir input[type="checkbox"]:hover,
+.formulir input[type="checkbox"]:hover + label {
+  --warnaSekarang: var(--warnaPengarah);
+}
+.formulir input[type="checkbox"]:focus-visible::after,
+.formulir input[type="checkbox"]:hover::after {
+  opacity: 0.5;
+  color: var(--warnaPengarah);
+}
+
+.formulir input[type="checkbox"]:checked + label:not(:hover),
+.formulir input[type="checkbox"]:checked:not(:hover) {
+  --warnaSekarang: var(--warnaAktif);
+}
+.formulir input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
