@@ -20,7 +20,7 @@ Jelajahi karya terbaru dan keterampilan saya dalam dunia pengembangan perangkat 
 
 Berikut adalah beberapa tampilan halaman website :
 
-![Screenshot 2024-10-07 072336](https://github.com/user-attachments/assets/c6bcf358-b150-43a6-8c5d-d5a2751bc730)
+![Screenshot 2024-10-07 073258](https://github.com/user-attachments/assets/fd01d5bb-8824-4b2d-9434-525df5406ba2)
 
 ## 📬 Kontak
 
